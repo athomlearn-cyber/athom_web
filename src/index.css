@@ -1,0 +1,95 @@
+/* Importamos las tipografías formales desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --primary-font: 'Roboto', sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
+  --overlay-color: rgba(17, 34, 22, 0.75); /* Verde oscuro corporativo transparente */
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: #fcfcfc;
+  color: #333;
+}
+
+/* Tipografía estructurada para los títulos */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--heading-font);
+  letter-spacing: -0.5px;
+}
+
+/* --- ESTILOS DEL HERO --- */
+.hero-bg {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Evita que el video sobresalga del contenedor */
+}
+.agro-mica {
+    background-color: #42514c !important;
+  }
+  .agro-mica2 {
+    color: #198754 !important;
+  }
+
+
+
+.hero-video {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Capa oscura superpuesta (Overlay) ahora usa ::after para tapar al video */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-color);
+  z-index: 1;
+}
+
+/* El contenido debe ir por encima del video (0) y del overlay (1) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --- DETALLES DE INTERFAZ B2B --- */
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px; /* Bordes más rectos para mayor formalidad */
+}
+
+.btn-lg {
+  font-size: 1rem;
+}
+
+/* Tarjetas de características */
+.shadow-sm {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04) !important;
+  border: 1px solid #eee !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08) !important;
+}
