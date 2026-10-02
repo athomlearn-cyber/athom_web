@@ -6,7 +6,7 @@ const Navbar = () => {
       <a href="/" className="text-decoration-none d-flex align-items-center">
 
           <img 
-            src="./src/assets/athom_logo.png" 
+            src="/athom_logo.png" 
             alt="Logo athom learn" 
             style={{ height: '94px', objectFit: 'contain' }} 
             className="me-3"

@@ -11,7 +11,7 @@ const DemoBanner = () => {
         <div className="d-flex justify-content-center">
           <div className="position-relative shadow rounded overflow-hidden" style={{ maxWidth: '400px', width: '100%' }}>
             <img 
-              src="./src/assets/iphone_pro.gif" 
+              src="/iphone_pro.gif" 
               alt="Demostración de la plataforma de e-learning en celular" 
               className="img-fluid w-100"
             />
